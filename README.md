@@ -66,3 +66,6 @@ The special reaction pauses the game until the next player accepts or denies. Re
 - **Reset Game / Restart Game:** host confirmation returns all connected players to the setup lobby, clears scores, hands and table, and preserves game mode, player limit and winning target. Players remain joined.
 - **End Game:** host confirmation returns everyone to setup with defaults: spoken mode, 2-player limit and first to 50. To enforce the two-player default, non-host players are released to the join screen and can rejoin.
 - Host can edit settings in the lobby and must save them before starting. All actions synchronize via the shared Redis game state.
+
+## Player profiles (v1.9)
+Players can tap **Edit** next to their name at any time, including during active turns, to change their name or select from **112 emoji avatars** (100 added to the original 12). Changes are written to the shared Redis state and synchronize to other devices. Names must be unique among current players.

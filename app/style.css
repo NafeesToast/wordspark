@@ -12,3 +12,9 @@
 .ratingPanel .primary{margin-top:8px;padding:9px 14px}
 
 .autoRatings{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.autoRatings span{border-radius:12px;background:#efe8ff;color:#51317a;padding:5px 8px;font-size:12px}
+
+.editProfileButton{font-size:13px;background:#ffdc58;color:#1b2442;padding:7px 11px;border-radius:12px;vertical-align:middle;font-weight:900}.profileOverlay{position:fixed;inset:0;z-index:1000;background:#05091cce;display:flex;align-items:center;justify-content:center;padding:14px}.profileModal{width:min(700px,100%);max-height:90vh;overflow:auto;background:#253467}.profileModal label{display:block;margin:14px 0 6px;font-weight:900}.profileNameRow{display:flex;gap:9px}.profileNameRow input{min-width:0;flex:1;background:#101a39;border:2px solid #879dd0;border-radius:12px;color:white;padding:12px}.avatarGallery{max-height:330px;overflow:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(54px,1fr));gap:7px}.avatarGallery button{font-size:29px;min-height:54px}.avatarGallery button.chosen{border-color:#ffda54;background:#ffda5470}@media(max-width:500px){.profileNameRow{flex-direction:column}.profileModal{padding:14px}}
+
+/* Host controls remain accessible in the lobby, during play, and after victory. */
+.persistentHostControls{position:sticky;top:8px;z-index:25;display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:#18294f;border:2px solid #ffdc58;border-radius:18px;padding:12px;margin:0 0 16px;box-shadow:0 8px 25px #0006}
+.persistentHostControls button{flex:1 1 145px;min-height:44px}
