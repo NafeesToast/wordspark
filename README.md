@@ -69,3 +69,7 @@ The special reaction pauses the game until the next player accepts or denies. Re
 
 ## Player profiles (v1.9)
 Players can tap **Edit** next to their name at any time, including during active turns, to change their name or select from **112 emoji avatars** (100 added to the original 12). Changes are written to the shared Redis state and synchronize to other devices. Names must be unique among current players.
+
+## Avatar expansion
+
+Now includes 422 unique selectable emoji avatars: 10 additional cat-themed avatars and 300 additional food, alien, robot, people, party and playful icons. The avatar gallery works during play, and the server validates against the same shared list. Emoji appearance varies by device.
