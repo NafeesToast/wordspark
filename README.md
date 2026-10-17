@@ -61,3 +61,8 @@ The deck has **100 special cards** (10 copies each of 10 types), alongside 1,000
 - **Remix:** shuffle the order of visible table cards.
 
 The special reaction pauses the game until the next player accepts or denies. Redis serializes actions using the existing game lock. Restart resets all effects and reshuffles.
+
+## Setup behavior (v1.8)
+- **Reset Game / Restart Game:** host confirmation returns all connected players to the setup lobby, clears scores, hands and table, and preserves game mode, player limit and winning target. Players remain joined.
+- **End Game:** host confirmation returns everyone to setup with defaults: spoken mode, 2-player limit and first to 50. To enforce the two-player default, non-host players are released to the join screen and can rejoin.
+- Host can edit settings in the lobby and must save them before starting. All actions synchronize via the shared Redis game state.
