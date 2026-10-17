@@ -36,3 +36,28 @@ The host can select **🔄 Restart game** at any time (including after a game en
 ## Live multiplayer preview
 
 After deploying to Vercel and configuring Upstash Redis, open `https://YOUR-DOMAIN.vercel.app/preview` on **each device**. This is the actual multiplayer game using the same shared Redis game state and API as the main app, not a static mockup. Speech-to-text controls are hidden and disabled on `/preview`; players type statements. The `/` route retains optional microphone transcription. Both routes use the same single game, so don't run separate test and production games simultaneously. The static `preview/index.html` file is an informational landing page only; it cannot synchronize devices when opened directly as a file.
+
+
+## New in this iteration
+- Players choose cute animal avatars in the lobby.
+- Optional kid-friendly synthesized sound effects (muted with Sounds off).
+- Card flip/deal animations at the table and when choosing replacement cards.
+- After playing a card, that player chooses **one of three** replacement words before the turn advances. Other players cannot see those choices.
+- Six-card hands are preserved; the opening round still requires one card from every player before conversation.
+- For the real multi-device preview, deploy and open `/preview` on every device. The standalone `preview/index.html` is a deployment guide, not a live shared game.
+
+## Special cards (v1.6)
+The deck has **100 special cards** (10 copies each of 10 types), alongside 1,000 single-word cards. Specials do not enter the conversation table or count as words. They can be played instead of a word on your post-statement card turn, but not during the opening round. The player still chooses one of three replacement cards. The next player must accept the special or use a **Deny** card before talking. Deny is consumed and automatically replaced.
+
+- **Destroy:** remove one selected table card.
+- **Skip:** skip the next player, passing the conversation to the player after them.
+- **Swap:** replace a selected table card with a random deck card.
+- **Deny:** cancel a pending special played by the previous player.
+- **Double:** the next speaker earns double points on their statement.
+- **Reverse:** reverse turn direction.
+- **Encore:** the player who played the special speaks again.
+- **Bonus:** gain two points immediately.
+- **Freeze:** the next speaker cannot play a special on their following card play.
+- **Remix:** shuffle the order of visible table cards.
+
+The special reaction pauses the game until the next player accepts or denies. Redis serializes actions using the existing game lock. Restart resets all effects and reshuffles.
