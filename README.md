@@ -73,3 +73,11 @@ Players can tap **Edit** next to their name at any time, including during active
 ## Avatar expansion
 
 Now includes 422 unique selectable emoji avatars: 10 additional cat-themed avatars and 300 additional food, alien, robot, people, party and playful icons. The avatar gallery works during play, and the server validates against the same shared list. Emoji appearance varies by device.
+
+## v2.4 Conversation and audio
+- Statement maximum 8,000 characters (10x the previous 800); expandable 12-row input.
+- Five automatic 1–5 ratings: Creativity, Funny, Cards vs length, Sequence (table concepts in order), Relevance (lexical overlap with the three latest statements). Their rounded average awards 1–5 bonus points. These are transparent heuristics, not semantic AI judgments.
+- With Sounds on, new activity-log entries are spoken using browser speech synthesis. Special card activity gets an electric synthesized tone. Browser autoplay restrictions may require a tap before sound plays.
+
+## v2.5 scoring update
+Each distinct word retired by Destroy, Swap or the 10-card overflow costs one point if mentioned in a scored statement, unless the same word is currently on the table. Red penalty tags appear only in the scoring history, never in the live composing UI. Conversation directions appear beneath the textarea.

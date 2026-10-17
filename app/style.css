@@ -18,3 +18,10 @@
 /* Host controls remain accessible in the lobby, during play, and after victory. */
 .persistentHostControls{position:sticky;top:8px;z-index:25;display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:#18294f;border:2px solid #ffdc58;border-radius:18px;padding:12px;margin:0 0 16px;box-shadow:0 8px 25px #0006}
 .persistentHostControls button{flex:1 1 145px;min-height:44px}
+
+.talk textarea{min-height:300px;max-height:75vh;resize:vertical;line-height:1.55}.autoRatings{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.autoRatings span{padding:5px 8px;border-radius:9px;background:#ffffff17;font-size:12px}
+
+.penaltyTag{display:inline-flex;background:#b51f46;color:white;border:1px solid #ff8c9e;border-radius:999px;padding:5px 10px;font-weight:900;font-size:12px}.scoringTags{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}.talk>p{font-size:13px;margin:10px 0 0;color:#c6d0ee}
+
+/* v2.6: readable, actual earned stars in score history */
+.autoRatings{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:7px;margin-top:9px}.autoRatings span{display:block;white-space:nowrap;font-size:.9rem;letter-spacing:.01em}.feeditem.statement small{display:block;line-height:1.65;margin-top:7px}
