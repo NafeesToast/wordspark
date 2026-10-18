@@ -81,3 +81,11 @@ Now includes 422 unique selectable emoji avatars: 10 additional cat-themed avata
 
 ## v2.5 scoring update
 Each distinct word retired by Destroy, Swap or the 10-card overflow costs one point if mentioned in a scored statement, unless the same word is currently on the table. Red penalty tags appear only in the scoring history, never in the live composing UI. Conversation directions appear beneath the textarea.
+\n## v2.8 — Grammar and gibberish\nGrammar is a sixth heuristic 1–5 star category. The star bonus is the rounded mean of six categories. Excessive repeated/nonsense-looking tokens deduct 1–2 additional points, displayed in the scored conversation feed. These lightweight checks may misjudge slang, playful invented words, non-English text, and sophisticated grammar; they are not AI language understanding.\n
+
+### v2.9 Avatar selection fix
+- Avatar picker available **before** hosting or joining, not just via Edit after joining.
+- Category tabs expose all 422 avatars, with new cats selected first so the expansion is immediately visible.
+- The chosen avatar is sent with the create/join API request and validated against the full list on the server.
+- Existing players can edit avatars at any time from their profile.
+- Deploy this new version to Vercel; old deployments will not show the change.

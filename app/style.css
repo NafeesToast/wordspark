@@ -25,3 +25,6 @@
 
 /* v2.6: readable, actual earned stars in score history */
 .autoRatings{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:7px;margin-top:9px}.autoRatings span{display:block;white-space:nowrap;font-size:.9rem;letter-spacing:.01em}.feeditem.statement small{display:block;line-height:1.65;margin-top:7px}
+
+/* v2.9: categorized avatar picker, including pre-join selection */
+.welcomeAvatarSelector{margin:10px 0 12px}.welcomeAvatarSelector>button{width:100%;min-height:48px;text-align:left}.avatarPickerWidget{width:100%;margin:12px 0}.avatarCategoryTabs{display:flex;gap:7px;overflow-x:auto;padding:4px 0 12px;scrollbar-width:thin}.avatarCategoryTabs button{white-space:nowrap;flex:none;border:2px solid #708cc7;background:#192750;color:white;border-radius:12px;padding:9px 12px;font-weight:800;cursor:pointer}.avatarCategoryTabs button.selected{background:#ffdb62;color:#152046;border-color:#ffdb62}.avatarCategoryTabs small{opacity:.75}.avatarPickerInfo{font-size:13px;color:#d6e3ff;margin-bottom:8px}.avatarGallery{max-height:390px;overflow-y:auto;overscroll-behavior:contain;grid-template-columns:repeat(auto-fill,minmax(58px,1fr));}.avatarGallery button{min-height:58px;cursor:pointer}.avatarGallery button.chosen{outline:3px solid #ffe174;outline-offset:-3px}
