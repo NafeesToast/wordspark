@@ -64,7 +64,7 @@ The special reaction pauses the game until the next player accepts or denies. Re
 
 ## Setup behavior (v1.8)
 - **Reset Game / Restart Game:** host confirmation returns all connected players to the setup lobby, clears scores, hands and table, and preserves game mode, player limit and winning target. Players remain joined.
-- **End Game:** host confirmation returns everyone to setup with defaults: spoken mode, 2-player limit and first to 50. To enforce the two-player default, non-host players are released to the join screen and can rejoin.
+- **End Game:** host confirmation returns everyone to setup with defaults: remote game, 2-player limit and first to 50. To enforce the two-player default, non-host players are released to the join screen and can rejoin.
 - Host can edit settings in the lobby and must save them before starting. All actions synchronize via the shared Redis game state.
 
 ## Player profiles (v1.9)
@@ -77,7 +77,7 @@ Now includes 422 unique selectable emoji avatars: 10 additional cat-themed avata
 ## v2.4 Conversation and audio
 - Statement maximum 8,000 characters (10x the previous 800); expandable 12-row input.
 - Five automatic 1–5 ratings: Creativity, Funny, Cards vs length, Sequence (table concepts in order), Relevance (lexical overlap with the three latest statements). Their rounded average awards 1–5 bonus points. These are transparent heuristics, not semantic AI judgments.
-- With Sounds on, new activity-log entries are spoken using browser speech synthesis. Special card activity gets an electric synthesized tone. Browser autoplay restrictions may require a tap before sound plays.
+- Sound and Reading are separate. Sound (on by default) plays game tones, including the electric tone for special cards. Reading (off by default) speaks new activity-log entries. Browser autoplay restrictions may require a tap before either plays.
 
 ## v2.5 scoring update
 Each distinct word retired by Destroy, Swap or the 10-card overflow costs one point if mentioned in a scored statement, unless the same word is currently on the table. Red penalty tags appear only in the scoring history, never in the live composing UI. Conversation directions appear beneath the textarea.
@@ -92,7 +92,7 @@ Each distinct word retired by Destroy, Swap or the 10-card overflow costs one po
 
 
 ## v3.0 Avatar picker
-- Tabs: All, Cats, Blookit (user-requested label).
+- Tabs: All, Cats, Food. The food tab is the fruit, meal, and drink emoji already in the avatar set.
 - Added 20 cute cat variants including 10 black cats.
 - Added 154 Blooket-themed emoji interpretations, with searchable character names; these are NOT Blooket copyrighted character illustrations or a verified exhaustive catalog.
 - Existing 422 avatars retained. Total: 596.
