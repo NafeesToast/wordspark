@@ -89,3 +89,18 @@ Each distinct word retired by Destroy, Swap or the 10-card overflow costs one po
 - The chosen avatar is sent with the create/join API request and validated against the full list on the server.
 - Existing players can edit avatars at any time from their profile.
 - Deploy this new version to Vercel; old deployments will not show the change.
+
+
+## v3.0 Avatar picker
+- Tabs: All, Cats, Blookit (user-requested label).
+- Added 20 cute cat variants including 10 black cats.
+- Added 154 Blooket-themed emoji interpretations, with searchable character names; these are NOT Blooket copyrighted character illustrations or a verified exhaustive catalog.
+- Existing 422 avatars retained. Total: 596.
+
+
+### v3.1 Fresh New Game
+Host **New Game (host only)** clears the table, scores, history and player list, retaining only the host. Other browsers see the join screen and must explicitly rejoin. Restart and Reset still retain participants; End deletes the game.
+
+
+## Consistent Android-style avatars (v3.3)
+All avatar choices are rendered from bundled PNG images generated using Google Noto Color Emoji, rather than platform emoji glyphs. The avatar value remains the same for server compatibility. This includes composite cat and character avatars. The font itself is not distributed.
